@@ -1,4 +1,7 @@
+-- This file uses gfx.js to plot a t-SNE representation of the movie-feature vector mapped in 2-Dimensions.
+-- Use qlua to run the following code:
 require 'torch'
+
 -- Define tensor data parameters
 numMovies = 3952
 numUsers = 6040
@@ -44,9 +47,6 @@ function draw_text_map(X, words, inp_map_size, inp_font_size, reduction)
   -- return text map:
   return map_im
 end
---print( userFeatures )
---print( movieFeatures )
-
 
 -- Display movie scatter plot
 m = require 'manifold'
